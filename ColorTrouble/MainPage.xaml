@@ -1,0 +1,40 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="ColorTrouble.MainPage"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        <StackPanel HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="480">
+            <TextBlock x:Name="Score" HorizontalAlignment="Left" Height="80" Margin="0,0,0,0" TextWrapping="Wrap" Text="Score : " Width="480" FontFamily="Segoe WP Semibold" FontSize="30"/>
+        </StackPanel>
+
+
+        <UI:AdControl ApplicationId="test_client" AdUnitId="Image480_80" HorizontalAlignment="Left" Height="80" Margin="0,720,0,0" VerticalAlignment="Top" Width="480"/>
+        <Grid HorizontalAlignment="Left" Height="640" Margin="0,80,0,0" VerticalAlignment="Top" Width="480">
+            <Image x:Name="Red_Glow" HorizontalAlignment="Left" Height="200" Margin="10,80,0,0" VerticalAlignment="Top" Width="200" Source="/Sprite/Red Glow.png" Tap="Red_Glow_Tap" Canvas.ZIndex="1" Visibility="Collapsed"/>
+            <Image x:Name="Red" HorizontalAlignment="Left" Height="120" Margin="50,120,0,0" VerticalAlignment="Top" Width="120" Source="/Sprite/Red.png"/>
+
+            <Image x:Name="Yellow_Glow" HorizontalAlignment="Right" Height="200" Margin="0,80,10,0" VerticalAlignment="Top" Width="200" Source="/Sprite/Yellow Glow.png" Tap="Yellow_Glow_Tap" Canvas.ZIndex="1" Visibility="Collapsed"/>
+            <Image x:Name="Yellow" HorizontalAlignment="Right" Height="120" Margin="0,120,50,0" VerticalAlignment="Top" Width="120" Source="/Sprite/Yellow.png"/>
+
+            <Image x:Name="Green_Glow" HorizontalAlignment="Left" Height="200" Margin="10,0,0,80" VerticalAlignment="Bottom" Width="200" Source="/Sprite/Green Glow.png" Tap="Green_Glow_Tap" Canvas.ZIndex="1" Visibility="Collapsed"/>
+            <Image x:Name="Green" HorizontalAlignment="Left" Height="120" Margin="50,0,0,120" VerticalAlignment="Bottom" Width="120" Source="/Sprite/Green.png"/>
+
+            <Image x:Name="Blue_Glow" HorizontalAlignment="Right" Height="200" Margin="0,0,10,80" VerticalAlignment="Bottom" Width="200" Source="/Sprite/Blue Glow.png" Tap="Blue_Glow_Tap" Canvas.ZIndex="1" Visibility="Collapsed"/>
+            <Image x:Name="Blue" HorizontalAlignment="Right" Height="120" Margin="0,0,50,120" VerticalAlignment="Bottom" Width="120" Source="/Sprite/Blue.png"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
